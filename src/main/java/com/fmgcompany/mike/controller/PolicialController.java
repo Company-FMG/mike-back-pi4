@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import com.fmgcompany.mike.dto.PolicialDTO;
 import com.fmgcompany.mike.model.Ocorrencia;
 import com.fmgcompany.mike.model.Viatura;
 import com.fmgcompany.mike.service.OcorrenciaService;
@@ -23,10 +24,10 @@ public class PolicialController {
     OcorrenciaService ocorrenciaService;
 
     @GetMapping
-    public List<Policial> getAllPoliciais() {
+    public List<PolicialDTO> buscar(){
         return policialService.findAll();
     }
-    @GetMapping("/email")
+    @GetMapping("/emais")
     public List<String> getEmail(){
         return policialService.findByEmail();
     }

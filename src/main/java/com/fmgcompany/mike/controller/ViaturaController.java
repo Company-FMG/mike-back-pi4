@@ -1,5 +1,6 @@
 package com.fmgcompany.mike.controller;
 
+import com.fmgcompany.mike.dto.ViaturaDTO;
 import com.fmgcompany.mike.model.Policial;
 import com.fmgcompany.mike.model.Viatura;
 import com.fmgcompany.mike.service.PolicialService;
@@ -23,7 +24,7 @@ public class ViaturaController {
     private PolicialService policialService;
 
     @GetMapping
-    public List<Viatura> buscarTodasViaturas(){
+    public List<ViaturaDTO> buscarTodasViaturas(){
         return this.viaturaService.buscarViaturas();
     }
     @GetMapping("/{id}")
