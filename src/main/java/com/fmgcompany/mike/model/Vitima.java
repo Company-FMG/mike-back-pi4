@@ -23,7 +23,7 @@ public class Vitima extends Pessoa{
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    @JsonManagedReference
+    /*@JsonManagedReference
     @OneToMany(mappedBy = "vitima")
-    private List<Denuncia> denuncias = new ArrayList<>();
+    private List<Denuncia> denuncias = new ArrayList<>();*/
 }
