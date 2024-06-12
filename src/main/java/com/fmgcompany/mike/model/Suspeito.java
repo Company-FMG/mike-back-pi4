@@ -18,9 +18,9 @@ public class Suspeito extends Pessoa{
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    @JsonManagedReference
+    /*@JsonManagedReference
     @ManyToOne
-    private Denuncia denuncia;
+    private Denuncia denuncia;*/
 
     @Getter
     @Setter

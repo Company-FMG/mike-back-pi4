@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,14 +31,14 @@ public class Denuncia {
     @Column
     protected String mapa;
 
-    @JsonBackReference
+    /*@JsonBackReference
     @ManyToOne
     @JoinColumn(name = "vitima_id", referencedColumnName = "id")
-    private Vitima vitima;
+    private Vitima vitima;*/
 
-    @JsonBackReference
+    /*@JsonBackReference
     @OneToMany
-    private List<Suspeito> suspeitos;
+    private List<Suspeito> suspeitos;*/
 
     @Column
     protected String status;

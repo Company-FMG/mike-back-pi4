@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:8100")
+@CrossOrigin(origins = {"http://localhost:8100", "https://localhost:5173"})
 @RestController
 @RequestMapping("/api/denuncias")
 public class DenunciaController {
@@ -45,7 +45,7 @@ public class DenunciaController {
         return this.denunciaService.atualizaDenuncia(id, denunciaAtualizada);
     }
 
-    @PutMapping("/{id}/{idVitima}")
+    /*@PutMapping("/{id}/{idVitima}")
     public ResponseEntity<Vitima> atribuirVitima(@PathVariable Long id, @PathVariable String idVitima){
         Optional<Vitima> vitima = this.vitimaService.findById(idVitima);
         Optional<Denuncia> denuncia = this.denunciaService.buscaDenunciaPeloId(id);
@@ -89,7 +89,7 @@ public class DenunciaController {
         }else {
             return ResponseEntity.notFound().build();
         }
-    }
+    }*/
 
 
     @DeleteMapping("/{id}")
