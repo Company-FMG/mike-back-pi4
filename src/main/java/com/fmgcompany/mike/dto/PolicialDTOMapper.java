@@ -22,6 +22,7 @@ public class PolicialDTOMapper implements Function<Policial,PolicialDTO> {
             idViatura = policial.getViatura().getIdViatura().toString();
         }
         return new PolicialDTO(
+                policial.getIdPolicial(),
                 policial.getCpf(),
                 policial.getNome(),
                 policial.getEmail(),

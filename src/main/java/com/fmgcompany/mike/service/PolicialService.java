@@ -26,14 +26,14 @@ import com.fmgcompany.mike.repository.PolicialRepository;
         @Autowired
         private PolicialDTOMapper policialDTOMapper;
 
-        /*public List<Policial> findAll() {
-            return policialRepository.findAll();
+        public List<PolicialDTO> findAll() {
+            return policialRepository.findAll().stream().map(policialDTOMapper).collect(Collectors.toList());
         }
-
-         */
-
         public Optional<Policial> findById(UUID id) {
             return policialRepository.findById(id);
+        }
+        public Optional<PolicialDTO> buscaDTO(UUID id) {
+            return policialRepository.findById(id).map(policialDTOMapper);
         }
 
         public Policial save(Policial policial) {
@@ -56,7 +56,5 @@ import com.fmgcompany.mike.repository.PolicialRepository;
             return this.policialRepository.findByNome(nome);
         }
 
-        public List<PolicialDTO> findAll() {
-            return policialRepository.findAll().stream().map(policialDTOMapper).collect(Collectors.toList());
-        }
+
     }

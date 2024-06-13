@@ -6,7 +6,6 @@ import java.util.UUID;
 
 import com.fmgcompany.mike.dto.PolicialDTO;
 import com.fmgcompany.mike.model.Ocorrencia;
-import com.fmgcompany.mike.model.Viatura;
 import com.fmgcompany.mike.service.OcorrenciaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,13 +26,14 @@ public class PolicialController {
     public List<PolicialDTO> buscar(){
         return policialService.findAll();
     }
-    @GetMapping("/emais")
+    @GetMapping("/emails")
     public List<String> getEmail(){
         return policialService.findByEmail();
     }
+
     @GetMapping("/{id}")
-    public ResponseEntity<Policial> getPolicialById(@PathVariable UUID id) {
-        Optional<Policial> policial = policialService.findById(id);
+    public ResponseEntity<PolicialDTO> getPolicialById(@PathVariable UUID id) {
+        Optional<PolicialDTO> policial = policialService.buscaDTO(id);
         return policial.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 

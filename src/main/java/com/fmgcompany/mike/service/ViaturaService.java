@@ -32,6 +32,9 @@ public class ViaturaService {
     public Optional<Viatura> buscarViaturaId(UUID id){
         return this.viaturaRepository.findById(id);
     }
+    public Optional<ViaturaDTO> buscarPorIdDTO(UUID id){
+        return this.viaturaRepository.findById(id).map(viaturaDTOMapper);
+    }
 
     public Viatura criarViatura(Viatura viatura){
         return viaturaRepository.save(viatura);

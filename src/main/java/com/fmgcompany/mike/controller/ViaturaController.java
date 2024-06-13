@@ -28,8 +28,8 @@ public class ViaturaController {
         return this.viaturaService.buscarViaturas();
     }
     @GetMapping("/{id}")
-    public Optional<Viatura> buscarViatura(@PathVariable UUID id){
-        return this.viaturaService.buscarViaturaId(id);
+    public Optional<ViaturaDTO> buscarViatura(@PathVariable UUID id){
+        return this.viaturaService.buscarPorIdDTO(id);
     }
 
     @PostMapping
@@ -38,7 +38,7 @@ public class ViaturaController {
     }
 
     //Alterar a viatura
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<Viatura> alterarViatura(@PathVariable UUID id, @RequestBody Viatura alteracoes){
         Optional<Viatura> viatura = this.viaturaService.buscarViaturaId(id);
         if(viatura.isPresent()){
