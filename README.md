@@ -8,8 +8,6 @@ Tecnologias utilizadas:
 - [Supabase](https://supabase.com/)
 - [Render](https://render.com/)
 
-## Slides
+## Documentação de API
 
-[Link do Canva](https://www.canva.com/design/DAGHu4x4j2s/cpKYpLUdZM0_XmmkLSGD3w/edit?utm_content=DAGHu4x4j2s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
-[Link do PDF](https://drive.google.com/file/d/15e6vCjtHol3vzlDWT1HTK-Ff2Jga7rl_/view?usp=sharing)
+[Link do Postman Documenter](https://documenter.getpostman.com/view/36195234/2sA3XPCN7E)
